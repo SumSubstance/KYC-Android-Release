@@ -1,6 +1,7 @@
 # KYCClientSDK
 
 ### Installation
+* Supports Android SDK 16+
 * Put `kyc_client.aar` into `libs` folder
 * Add gradle dependencies
 
@@ -26,7 +27,12 @@ implementation 'com.squareup.picasso:picasso:2.71828'
 
 ```
 public void startKYCModule() {
+
+    String kycAPIPath = "msdk.sumsub.com";
+//    String kycAPIPath = "test-msdk.sumsub.com";
+    
     KYCClientData clientData = new KYCClientData(
+        kycAPIPath,
         getPackageName(),
         "1.0",
         TestManager.getInstance().getLocale(),
