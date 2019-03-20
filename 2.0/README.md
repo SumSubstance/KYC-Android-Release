@@ -2,7 +2,7 @@
 
 ### Installation
 * Supports Android SDK 17+
-* Put `kyc_client.aar` into `libs` folder
+* Put `kyc_client.aar` and `kyc_face_tracker.aar` into `libs` folder
 * Add `mavenCentral()` into `buildscript` and `allprojects` `repositories` (for android-gif-drawable)
 * Add gradle dependencies
 
