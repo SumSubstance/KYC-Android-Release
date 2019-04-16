@@ -2,7 +2,7 @@
 
 ### Installation
 * Supports Android SDK 17+
-* Put `kyc_client.aar` and `kyc_face_tracker.aar` into `libs` folder
+* Put `kyc_client.aar`, `kyc_face_tracker.aar`, `kyc_doc_tracker.aar` into `libs` folder
 * Add `mavenCentral()` into `buildscript` and `allprojects` `repositories` (for android-gif-drawable)
 * Add gradle dependencies
 
@@ -99,6 +99,58 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
             // do smth
         }
     }
+}
+
+```
+* If you use Proguard obfuscation, you will need to add following rules to Proguard.pro file:
+
+```
+-android
+-allowaccessmodification
+-dontpreverify
+
+-keepattributes *Annotation*
+-keepattributes RuntimeVisibleAnnotations
+-keepattributes RuntimeInvisibleAnnotations
+-keepattributes RuntimeVisibleParameterAnnotations
+-keepattributes RuntimeInvisibleParameterAnnotations
+-keepattributes Signature
+-keepattributes Exceptions
+-keepparameternames
+-keepattributes SourceFile,LineNumberTable,InnerClasses,EnclosingMethod
+
+
+# Picasso -> OkHttp
+-dontwarn javax.annotation.**
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+-dontwarn org.codehaus.mojo.animal_sniffer.*
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
+
+
+# CameraView
+-keep class com.otaliastudios.cameraview.* {*;}
+
+# DocDetectionLib
+-keep class biz.smartengines.smartid.swig.* { *; }
+
+# FaceDetectionLib
+-keep class com.talkingheads.cameraplugin.* { *; }
+
+# RoundedImageView
+-dontnote com.makeramen.roundedimageview.*
+
+# Logs
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** w(...);
+    public static *** v(...);
+    public static *** i(...);
+}
+
+# Toasts
+-assumenosideeffects class android.widget.Toast{
+    public static *** makeText(...);
+    public *** show();
 }
 
 ```
