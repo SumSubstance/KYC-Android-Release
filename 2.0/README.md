@@ -102,7 +102,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 
 ```
-* If you use Proguard obfuscation, you will need to add following rules to Proguard.pro file:
+* If you use Proguard obfuscation, you will need to add following rules to proguard-rules.pro file:
 
 ```
 -android
