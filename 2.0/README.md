@@ -128,7 +128,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 
 # CameraView
--keep class com.otaliastudios.cameraview.* {*;}
+-keep class com.otaliastudios.cameraview.kyc.* {*;}
 
 # DocDetectionLib
 -keep class biz.smartengines.smartid.swig.* { *; }
