@@ -1,5 +1,5 @@
 # KYCClientSDK
-Last released version: 2.2.0-Beta1
+Last released version: 2.2.0-Beta2
 
 ### Version 2.2.0-Beta1 changes
 - Zoom integtation
@@ -12,8 +12,8 @@ Last released version: 2.2.0-Beta1
 * Add maven repo to project's level build.gradle (in allProjects { repositories { section
 ```
 maven {
-            url  "https://dl.bintray.com/sumsub/maven"
-        }
+  url  "https://dl.bintray.com/sumsub/maven"
+}
 ```
 * Add gradle dependencies
 ```
