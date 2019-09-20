@@ -18,8 +18,6 @@ implementation 'com.sumsub:kyc-client:2.2.0-Beta1'
 
 ```
 * Start KYC Module like this
-
-```
 public void startKYCModule() {
     String kycAPIPath = "msdk.sumsub.com";
     //String kycAPIPath = "test-msdk.sumsub.com";
