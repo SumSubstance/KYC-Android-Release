@@ -1,7 +1,7 @@
 # KYCClientSDK
 Last released version: 2.2.0-Beta2
 
-### Version 2.2.0-Beta1 changes
+### Version 2.2.0-Beta2 changes
 - Zoom integtation
 - Split SDK on tree modules (kyc-core, kyc-client, kyc-zoom)
 
@@ -17,9 +17,9 @@ maven {
 ```
 * Add gradle dependencies
 ```
-implementation 'com.sumsub:kyc-core:2.2.0-Beta1' 
-implementation 'com.sumsub:kyc-zoom:2.2.0-Beta1' //add this line if you need Zoom module
-implementation 'com.sumsub:kyc-client:2.2.0-Beta1'
+implementation 'com.sumsub:kyc-core:2.2.0-Beta2' 
+implementation 'com.sumsub:kyc-zoom:2.2.0-Beta2' //add this line if you need Zoom module
+implementation 'com.sumsub:kyc-client:2.2.0-Beta2'
 ```
 * Start KYC Module like this
 ```
