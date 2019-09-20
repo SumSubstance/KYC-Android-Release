@@ -9,6 +9,12 @@ Last released version: 2.2.0-Beta1
 
 ### Installation
 * Supports Android SDK 16+
+* Add maven repo to project's level build.gradle (in allProjects { repositories { section
+```
+maven {
+            url  "https://dl.bintray.com/sumsub/maven"
+        }
+```
 * Add gradle dependencies
 ```
 implementation 'com.sumsub:kyc-core:2.2.0-Beta1' 
