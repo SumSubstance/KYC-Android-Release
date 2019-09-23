@@ -1,9 +1,9 @@
 # KYCClientSDK
-Last released version: 2.2.0-Beta2
+Last released version: 2.2.0-Beta3
 
-### Version 2.2.0-Beta2 changes
+### Version 2.2.0-Beta3 changes
 - Zoom integtation
-- Split SDK on tree modules (kyc-core, kyc-client, kyc-zoom)
+- Split SDK on tree modules (kyc-core, kyc-client, kyc-liveness3d)
 
 
 
