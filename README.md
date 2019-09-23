@@ -17,9 +17,9 @@ maven {
 ```
 * Add gradle dependencies
 ```
-implementation 'com.sumsub:kyc-core:2.2.0-Beta2' 
-implementation 'com.sumsub:kyc-zoom:2.2.0-Beta2' //add this line if you need Zoom module
-implementation 'com.sumsub:kyc-client:2.2.0-Beta2'
+implementation 'com.sumsub:kyc-core:2.2.0-Beta3'
+implementation 'com.sumsub:kyc-liveness3d:2.2.0-Beta3' //add this line if you need Liveness module
+implementation 'com.sumsub:kyc-client:2.2.0-Beta3'
 ```
 * Start KYC Module like this
 ```
