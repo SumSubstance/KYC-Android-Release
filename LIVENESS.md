@@ -1,6 +1,6 @@
 ## Liveness3D module
 
-Last released version: 2.2.0-Beta2
+Last released version: 2.2.0-Beta3
 
 ### Installation
 * Supports Android SDK 16+
@@ -61,7 +61,7 @@ enum class Liveness3DResult {
 
 # Localization
 
-Override these strings in your client app:
+Override these strings in your client app for localization:
 ```
  <string name="liveness_let_s_try_that_again">Let\'s try that again</string>
  <string name="liveness_first_please_make_sure_your_environment">But first, please make sure your environment meets the requirements</string>
