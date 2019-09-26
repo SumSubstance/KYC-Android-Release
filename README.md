@@ -83,7 +83,7 @@ public KYCTokenUpdater getKYCTokenUpdater() {
 ```
 * Receive verification result callback like this
 
-```
+```java
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);

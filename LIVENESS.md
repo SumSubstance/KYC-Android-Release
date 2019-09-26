@@ -19,7 +19,7 @@ implementation 'com.sumsub:kyc-client:{last_version}'
 
 ### Usage
 Start liveness check by:
-```
+```java
 String token = TestManager.getInstance().getToken();
 String applicant = TestManager.getInstance().getApplicant();
 startActivityForResult(
@@ -34,7 +34,7 @@ startActivityForResult(
 );
 ```
 And here you can get results in onActivityResult callback:
-```
+```java
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
@@ -49,7 +49,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 
 # Possible result statuses
-```
+```kotlin
 enum class Liveness3DResult {
     Cancelled,
     InitializationFailed,
@@ -85,7 +85,7 @@ Override these strings in your client app for localization:
 # Liveness customizatiom
 
 Use class KYCLivenessCustomization. For example:
-```
+```java
 //set background color and screen ratio (1.0 - fullscreen)
 KYCLivenessCustomization customization = new KYCLivenessCustomization();
 customization.getFrame().setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.blueDark));
@@ -103,7 +103,7 @@ startActivityForResult(KYCLiveness3DActivity.Companion.newIntent(
 
 Other fields for customization. Base fields:
 
-```
+```kotlin
 @ColorInt
 var backgroundColor
 @ColorInt
@@ -117,7 +117,7 @@ var button: Button
 ```
 
 Frame fields (frame variable):
-```
+```kotlin
 var ratio
 @ColorInt
 var backgroundColor
@@ -126,7 +126,7 @@ var border: Border
 Also you can create your own frame.
 
 Border fields:
-```
+```kotlin
 var width
 var radius
 @ColorInt
@@ -134,7 +134,7 @@ var color
 ```
 
 Feedback filds:
-```
+```kotlin
 var cornerRadius
 @ColorInt
 var backgroundColor
@@ -145,13 +145,13 @@ var size: Size? = null
 ```
 
 Size fields:
-```
+```kotlin
 var width
 var height
 ```
 
 Oval fields:
-```
+```kotlin
 var strokeWidth
 @ColorInt
 var strokeColor
@@ -159,7 +159,7 @@ var progress: Progress
 ```
 
 Progress fields:
-```
+```kotlin
 var strokeWidth
 @ColorInt
 var color1
@@ -169,7 +169,7 @@ var radialOffset
 ```
 
 Button fields:
-```
+```kotlin
 @ColorInt
 var textNormalColor
 @ColorInt
