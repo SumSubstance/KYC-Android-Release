@@ -1,6 +1,6 @@
 ## Liveness3D module
 
-Last released version: 2.2.0-Beta3
+Last released version: 2.2.0-Beta4
 
 ### Installation
 * Supports Android SDK 16+
@@ -12,9 +12,9 @@ maven {
 ```
 * Add gradle dependencies
 ```
-implementation 'com.sumsub:kyc-core:2.2.0-Beta3'
-implementation 'com.sumsub:kyc-liveness3d:2.2.0-Beta3'
-implementation 'com.sumsub:kyc-client:2.2.0-Beta3'
+implementation 'com.sumsub:kyc-core:{last_version}'
+implementation 'com.sumsub:kyc-liveness3d:{last-version}'
+implementation 'com.sumsub:kyc-client:{last_version}'
 ```
 
 ### Usage
@@ -80,6 +80,104 @@ Override these strings in your client app for localization:
  <string name="liveness_processing">Processing…</string>
  <string name="liveness_success">Success!</string>
  <string name="liveness_continue">Continue</string>
+```
+
+# Liveness customizatiom
+
+Use class KYCLivenessCustomization. For example:
+```
+//set background color and screen ratio (1.0 - fullscreen)
+KYCLivenessCustomization customization = new KYCLivenessCustomization();
+customization.getFrame().setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.blueDark));
+customization.getFrame().setRatio(0.98f);
+//and send parameters to KYCLiveness3DActivity
+startActivityForResult(KYCLiveness3DActivity.Companion.newIntent(
+    requireContext(), 
+    apiUrl, 
+    applicant, 
+    token, 
+    Locale.getDefault(), 
+    customization), 
+    KYCLiveness3DActivity.REQUEST_RESULT_CODE_ID);
+```
+
+Other fields for customization. Base fields:
+
+```
+@ColorInt
+var backgroundColor
+@ColorInt
+var foregroundColor
+@DrawableRes
+var brandingLogo
+var frame: Frame
+var feedback: Feedback
+var oval: Oval
+var button: Button
+```
+
+Frame fields (frame variable):
+```
+var ratio
+@ColorInt
+var backgroundColor
+var border: Border
+```
+Also you can create your own frame.
+
+Border fields:
+```
+var width
+var radius
+@ColorInt
+var color
+```
+
+Feedback filds:
+```
+var cornerRadius
+@ColorInt
+var backgroundColor
+@ColorInt
+var textColor
+var enablePulsatingText: Boolean = true
+var size: Size? = null
+```
+
+Size fields:
+```
+var width
+var height
+```
+
+Oval fields:
+```
+var strokeWidth
+@ColorInt
+var strokeColor
+var progress: Progress
+```
+
+Progress fields:
+```
+var strokeWidth
+@ColorInt
+var color1
+@ColorInt
+var color2
+var radialOffset
+```
+
+Button fields:
+```
+@ColorInt
+var textNormalColor
+@ColorInt
+var textHighlightColor
+@ColorInt
+var backgroundNormalColor
+@ColorInt
+var backgroundHighlightColor
 ```
 
 See demo for more examples: https://github.com/SumSubstance/KYC-Android-Demo

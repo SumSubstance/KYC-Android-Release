@@ -1,9 +1,8 @@
 # KYCClientSDK
-Last released version: 2.2.0-Beta3
+Last released version: 2.2.0-Beta4
 
-### Version 2.2.0-Beta3 changes
-- Zoom integtation
-- Split SDK on tree modules (kyc-core, kyc-client, kyc-liveness3d)
+### Version 2.2.0-Beta4 changes
+- Added customization for liveness module (see LIVENESS.md doc)
 
 
 
@@ -17,9 +16,9 @@ maven {
 ```
 * Add gradle dependencies
 ```
-implementation 'com.sumsub:kyc-core:2.2.0-Beta3'
-implementation 'com.sumsub:kyc-liveness3d:2.2.0-Beta3' //add this line if you need Liveness module
-implementation 'com.sumsub:kyc-client:2.2.0-Beta3'
+implementation 'com.sumsub:kyc-core:{last_version}'
+implementation 'com.sumsub:kyc-liveness3d:{last-version}' //add this line if you need Liveness module
+implementation 'com.sumsub:kyc-client:{last_version}'
 ```
 * Start KYC Module like this
 ```
