@@ -21,7 +21,7 @@ implementation 'com.sumsub:kyc-liveness3d:{last-version}' //add this line if you
 implementation 'com.sumsub:kyc-client:{last_version}'
 ```
 * Start KYC Module like this
-```
+```java
 public void startKYCModule() {
     String kycAPIPath = "msdk.sumsub.com";
     //String kycAPIPath = "test-msdk.sumsub.com";
