@@ -1,8 +1,8 @@
 # KYCClientSDK
-Last released version: 2.2.0-Beta4
+Last released version: 2.2.0-Beta7
 
-### Version 2.2.0-Beta4 changes
-- Added customization for liveness module (see LIVENESS.md doc)
+### Version 2.2.0-Beta7 changes
+- Fixed issues with video playback
 
 
 
