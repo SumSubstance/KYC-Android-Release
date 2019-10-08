@@ -1,6 +1,6 @@
 ## Liveness3D module
 
-Last released version: 2.2.0-Beta7
+Last released version: 2.2.0-RC1
 
 ### Installation
 * Supports Android SDK 16+

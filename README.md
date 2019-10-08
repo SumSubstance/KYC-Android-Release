@@ -1,8 +1,8 @@
 # KYCClientSDK
-Last released version: 2.2.0-Beta7
+Last released version: 2.2.0-RC1
 
-### Version 2.2.0-Beta7 changes
-- Fixed issues with video playback
+### Version 2.2.0-RC1 changes
+- Fixed issues
 
 
 
@@ -23,27 +23,31 @@ implementation 'com.sumsub:kyc-client:{last_version}'
 * Start KYC Module like this
 ```java
 public void startKYCModule() {
-    String kycAPIPath = "msdk.sumsub.com";
-    //String kycAPIPath = "test-msdk.sumsub.com";
+    String kycAPIPath = "msdk.sumsub.com"; //prod
+    //String kycAPIPath = "test-msdk.sumsub.com"; //dev
     
+    KYCColorConfig config = new KYCColorConfig();
+    //config.setChatButtonBackgroundColor(Color.parseColor("#aaaaaa"));
+    //config.setChatButtonTextColor(Color.BLACK);
+
     KYCClientData clientData = new KYCClientData(
         kycAPIPath,
         getPackageName(),
-        "1.0",
+        "2.0",
         TestManager.getInstance().getLocale(),
         TestManager.getInstance().getApplicant(),
         "support@sumsub.com",
-        "Identity Verification",
-        "Sub&Substance",
-        "Loading..."
-    );
-    KYCManager.init(
-      getApplicationContext(), 
-      clientData, 
-      TestManager.getInstance().getKYCTokenUpdater(),
-      Collections.singletonList(new ZoomModule()) //if you need Zoom module or empty list instead
+        config,
+        new KYCStringConfig(),
+        new KYCIconConfig()
     );
 
+    KYCManager.init(
+        this, 
+        clientData, 
+        TestManager.getInstance().getKYCTokenUpdater(), 
+        Collections.singletonList(new Liveness3DModule()) //if you need Liveness module or empty list instead
+    );
     Intent intent = new Intent(this, KYCChatActivity.class);
     startActivityForResult(intent, KYC_REQUEST_CODE);
 }
