@@ -1,8 +1,10 @@
 # KYCClientSDK
-Last released version: 2.2.0-RC1
+Last released version: 2.2.0-RC2
 
-### Version 2.2.0-RC1 changes
+### Changes
 - Fixed issues
+- Added new public Liveness customization properties
+- Removed second success dialog in chat
 
 
 

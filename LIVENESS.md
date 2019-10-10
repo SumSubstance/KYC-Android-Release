@@ -1,6 +1,26 @@
 ## Liveness3D module
 
-Last released version: 2.2.0-RC1
+Last released version: 2.2.0-RC2
+
+Added new fields for customization:
+```
+KYCLivenessCustomization:
+showPreEnrollmentScreen
+showRetryScreen
+showUserLockedScreen
+enableLowLightMode
+exitAnimationSuccessResourceID
+exitAnimationUnsuccessResourceID
+
+KYCLivenessCustomization.Results:
+background
+foregroundColor
+
+KYCLivenessCustomization.InstructionsImages:
+genericImage
+badLightingImage
+badAngleImage
+```
 
 ### Installation
 * Supports Android SDK 16+
