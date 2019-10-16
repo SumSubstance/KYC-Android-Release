@@ -1,10 +1,9 @@
 # KYCClientSDK
-Last released version: 2.2.0-RC2
+Last released version: 2.3.0
 
 ### Changes
+- Added new activity for Face Auth
 - Fixed issues
-- Added new public Liveness customization properties
-- Removed second success dialog in chat
 
 
 

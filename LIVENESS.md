@@ -1,8 +1,11 @@
 ## Liveness3D module
 
-Last released version: 2.2.0-RC2
+Last released version: 2.3.0
+### Changes
+ - New activity for liveness (Face Authentification)
+ - Fixed issues
+ - Added new result classes
 
-Added new fields for customization:
 ```
 KYCLivenessCustomization:
 showPreEnrollmentScreen
@@ -37,36 +40,59 @@ implementation 'com.sumsub:kyc-liveness3d:{last-version}'
 implementation 'com.sumsub:kyc-client:{last_version}'
 ```
 
-### Usage
-Start liveness check by:
-```java
-String token = TestManager.getInstance().getToken();
-String applicant = TestManager.getInstance().getApplicant();
-startActivityForResult(
-	KYCLiveness3DActivity.Companion.newIntent(
-		requireContext(), 
-		apiUrl, 
-		applicant, 
-		token, 
-		Locale.getDefault()
-	), 
-	KYCLiveness3DActivity.REQUEST_RESULT_CODE_ID
-);
+For liveness right now we have two different activities:
 ```
-And here you can get results in onActivityResult callback:
-```java
-@Override
-public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
+KYCLivenessFaceAuthActivity  // For Face Auth
+KYCLivenessFaceDetectionActivity // Liveness detection, old way
+```
+In onActivityResult you can check two codes:
+```
+KYCLiveness3D.REQUEST_CODE_ID_FACE_DETECTION
+KYCLiveness3D.REQUEST_CODE_ID_FACE_AUTH
+```
 
-    if (requestCode == KYCLiveness3DActivity.REQUEST_RESULT_CODE_ID) {
-        Toast.makeText(
-        	requireContext(), 
-        	"Liveness3D status is " + data.getSerializableExtra(KYCLiveness3DActivity.EXTRA_STATUS), Toast.LENGTH_SHORT
-        ).show();
-    }  
-}
+### Usage
+Start check by:
+```kotlin
+startActivityForResult(
+    KYCLivenessFaceAuthActivity.newIntent(
+        this@StartActivity, 
+        BuildConfig.BASE_URL, 
+        applicantId, 
+        token, 
+        Locale.getDefault(), 
+        customization
+    ), 
+    KYCLiveness3D.REQUEST_CODE_ID_FACE_AUTH
+)
+Or
+```kotlin
+startActivityForResult(
+    KYCLivenessFaceDetectionActivity.newIntent(
+        this@StartActivity, 
+        BuildConfig.BASE_URL, 
+        applicantId, 
+        token, 
+        Locale.getDefault(), 
+        customization
+    ), 
+    KYCLiveness3D.REQUEST_CODE_ID_FACE_AUTH
+)
 ```
+You can use KYCLivenessFaceDetectionActivity as earlier when applicantId == null instead of KYCLivenessFaceAuthActivity needs correct applicantId.
+
+And you can get results in onActivityResult callback.
+For KYCLivenessFaceAuthActivity:
+```kotlin
+data?.getParcelableExtra<KYCLivenessResult.FaceAuth>(KYCLiveness3D.EXTRA_RESULT)
+```
+results will be in KYCLivenessResult.FaceAuth.
+
+For KYCLivenessFaceDetectionActivity:
+```kotlin
+data?.getParcelableExtra<KYCLivenessResult.FaceDetection>(KYCLiveness3D.EXTRA_RESULT)
+```
+results will be in KYCLivenessResult.FaceDetection.
 
 # Possible result statuses
 ```kotlin
