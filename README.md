@@ -1,5 +1,5 @@
 # KYCClientSDK
-Last released version: 2.3.0
+Last released version: 2.3.2
 
 ### Changes
 - Added new activity for Face Auth
