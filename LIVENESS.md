@@ -1,6 +1,6 @@
 ## Liveness3D module
 
-Last released version: 2.3.4
+Last released version: 2.3.5
 ### Changes
  - New activity for liveness (Face Authentification)
  - Fixed issues
