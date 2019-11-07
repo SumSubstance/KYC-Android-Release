@@ -108,7 +108,6 @@ enum class Liveness3DResult {
 # Localization
 
 Override these strings in your client app for localization:
-Common strings:
 ```
  <string name="liveness_let_s_try_that_again">Let\'s try that again</string>
  <string name="liveness_first_please_make_sure_your_environment">But first, please make sure your environment meets the requirements</string>
