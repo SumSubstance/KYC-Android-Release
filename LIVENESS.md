@@ -108,6 +108,7 @@ enum class Liveness3DResult {
 # Localization
 
 Override these strings in your client app for localization:
+Common strings:
 ```
  <string name="liveness_let_s_try_that_again">Let\'s try that again</string>
  <string name="liveness_first_please_make_sure_your_environment">But first, please make sure your environment meets the requirements</string>
@@ -126,6 +127,46 @@ Override these strings in your client app for localization:
  <string name="liveness_processing">Processing…</string>
  <string name="liveness_success">Success!</string>
  <string name="liveness_continue">Continue</string>
+ 
+ <string name="zoom_accessibility_cancel_button">Cancel</string>
+ <string name="zoom_action_continue">CONTINUE</string>
+ <string name="zoom_action_im_ready">I\'M READY</string>
+ <string name="zoom_action_ok">OK</string>
+ <string name="zoom_action_try_again">TRY AGAIN</string>
+ <string name="zoom_camera_permission_enable_camera">ENABLE CAMERA</string>
+ <string name="zoom_camera_permission_header">Camera Access</string>
+ <string name="zoom_camera_permission_launch_settings">LAUNCH SETTINGS</string>
+ <string name="zoom_camera_permission_message_auth">ZoOm has detected your camera permissions are disabled. Tap the button below to launch your OS settings.</string>
+ <string name="zoom_camera_permission_message_enroll">To get started with ZoOm,\nenable access to your selfie camera.</string>
+ <string name="zoom_feedback_center_face">Center Your Face</string>
+ <string name="zoom_feedback_face_not_found">Frame Your Face</string>
+ <string name="zoom_feedback_face_not_looking_straight_ahead">Look Straight Ahead</string>
+ <string name="zoom_feedback_face_not_upright">Keep Your Head Straight</string>
+ <string name="zoom_feedback_hold_steady">Hold Steady</string>
+ <string name="zoom_feedback_move_phone_away">Move Phone Away</string>
+ <string name="zoom_feedback_move_phone_closer">Move Phone Closer</string>
+ <string name="zoom_feedback_move_phone_even_closer">Even Closer</string>
+ <string name="zoom_feedback_move_phone_to_eye_level">Move Phone Up To Eye Level</string>
+ <string name="zoom_feedback_move_tablet_away">Move Tablet Away</string>
+ <string name="zoom_feedback_move_tablet_closer">Move Tablet In</string>
+ <string name="zoom_feedback_move_tablet_to_eye_level">Move Tablet Up To Eye Level</string>
+ <string name="zoom_feedback_use_even_lighting">Light Face More Evenly</string>
+ <string name="zoom_locked_button">Locked Out</string>
+ <string name="zoom_locked_header">ZoOm is Locked</string>
+ <string name="zoom_locked_header_ready">ZoOm is Ready</string>
+ <string name="zoom_locked_try_again_in">Please try again in:</string>
+ <string name="zoom_pre_enroll_header">Face Capture</string>
+ <string name="zoom_pre_enroll_header_face_angle">Raise Camera\nUp To Eye Level</string>
+ <string name="zoom_pre_enroll_header_lighting">Light Face Evenly</string>
+ <string name="zoom_pre_enroll_header_ready">All Set!</string>
+ <string name="zoom_pre_enroll_message">Let\'s take\na quick video selfie.</string>
+ <string name="zoom_pre_enroll_message_face_angle">Make sure the phone is on your eye level. Get ready to ZoOm!</string>
+ <string name="zoom_pre_enroll_message_lighting">Please check your environment to ensure that you have good lighting.</string>
+ <string name="zoom_retry_bad_lighting_header">Light Face Evenly</string>
+ <string name="zoom_retry_bad_lighting_message">Something about your environment lighting is making it hard to authenticate you.\n\nMake sure you are in a well-lit and not too bright location.</string>
+ <string name="zoom_retry_face_angle_header">Raise Camera\nUp to Eye Level</string>
+ <string name="zoom_retry_generic_header">Check Lighting\nand Phone Position</string>
+ <string name="zoom_retry_generic_message">Hold the phone in front of your face and make sure you are in good lighting before proceeding.\n\nFor best results, wipe off your camera lens so your face is clear and crisp in the camera.</string>
 ```
 
 # Liveness customizatiom
