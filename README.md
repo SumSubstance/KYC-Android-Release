@@ -1,9 +1,17 @@
 # KYCClientSDK
-Last released version: 2.3.5
+Last released version: 2.4.0
 
 ### Changes
-- Fixed crashes and issues
-
+- Fixed socket issues: chat freezing, added auto reconnect, improved socket livecycle
+- Fixed issue with dissmissing of 6 photo in panel after successful liveness
+- Improved chat smoothness
+- Liveness changes: new endpoint, changes in JSON for review result. Now it has structure like:
+```json
+"reviewResult":  {
+   "reviewAnswer": "GREEN", // values are the same as earlier
+   "rejectLabels": [ ]
+}
+```
 
 
 ### Installation
