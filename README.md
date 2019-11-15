@@ -14,7 +14,7 @@ Last released version: 2.4.0
   }
 }
 ```
-
+More info about Liveness you can see by link: https://github.com/SumSubstance/KYC-Android-Release/blob/master/LIVENESS.md
 
 ### Installation
 * Supports Android SDK 16+
