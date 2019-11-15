@@ -2,14 +2,16 @@
 Last released version: 2.4.0
 
 ### Changes
-- Fixed socket issues: chat freezing, added auto reconnect, improved socket livecycle
+- Fixed socket issues: chat freezing, added auto reconnect, improved socket lifecycle
 - Fixed issue with dissmissing of 6 photo in panel after successful liveness
 - Improved chat smoothness
-- Liveness changes: new endpoint, changes in JSON for review result. Now it has structure like:
+- Liveness changes: changes in the JSON response for the review result. Now it has structure like:
 ```json
-"reviewResult":  {
-   "reviewAnswer": "GREEN", 
-   "rejectLabels": [ ]
+"review: {
+  "reviewResult":  {
+     "reviewAnswer": "GREEN", 
+     "rejectLabels": [ ]
+  }
 }
 ```
 
