@@ -9,7 +9,7 @@ Last released version: 2.4.0
 ```json
 "review: {
   "reviewResult":  {
-     "reviewAnswer": "GREEN", 
+     "reviewAnswer": "GREEN", // or RED
      "rejectLabels": [ ]
   }
 }
