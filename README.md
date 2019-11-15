@@ -8,7 +8,7 @@ Last released version: 2.4.0
 - Liveness changes: new endpoint, changes in JSON for review result. Now it has structure like:
 ```json
 "reviewResult":  {
-   "reviewAnswer": "GREEN", // values are the same as earlier
+   "reviewAnswer": "GREEN", 
    "rejectLabels": [ ]
 }
 ```
