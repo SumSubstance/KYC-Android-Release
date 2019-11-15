@@ -81,12 +81,22 @@ For KYCLivenessFaceAuthActivity:
 data?.getParcelableExtra<KYCLivenessResult.FaceAuth>(KYCLiveness3D.EXTRA_RESULT)
 ```
 results will be in KYCLivenessResult.FaceAuth.
+KYCLivenessResult.FaceAuth fields:
+```
+result.id
+result.type
+results.rejectLabels
+```
+
 
 For KYCLivenessFaceDetectionActivity:
 ```kotlin
 data?.getParcelableExtra<KYCLivenessResult.FaceDetection>(KYCLiveness3D.EXTRA_RESULT)
 ```
 results will be in KYCLivenessResult.FaceDetection.
+
+
+
 
 # Possible result statuses
 ```kotlin
