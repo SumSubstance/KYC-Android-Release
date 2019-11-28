@@ -112,7 +112,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ```
 In version 2.4.1 we added new optional callback for FaceAuth request. You can use it like:
-```
+```kotlin
 //first, create callback
 val receiver = Liveness3DResultReceiver(Handler()).apply {
     setReceiver(object : Liveness3DResultReceiver.Receiver {
@@ -122,7 +122,7 @@ val receiver = Liveness3DResultReceiver(Handler()).apply {
     })
  }
  //second, pass it to KYCLivenessFaceAuthActivity. 
- //this callback nullable and optional
+ //Remember! this callback nullable and optional.
 startActivityForResult(KYCLivenessFaceAuthActivity.newIntent(this@StartActivity, BuildConfig.BASE_URL, applicantId, token, Locale.getDefault(), customization, receiver), KYCLiveness3D.REQUEST_CODE_ID_FACE_AUTH)
 ```
 Than after request will completed you recieve Bundle object like:
