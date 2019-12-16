@@ -1,5 +1,5 @@
 # KYCClientSDK
-Last released version: 2.5.0
+Last released version: 2.5.3
 
 ### Changes
 - Fixed socket issues: chat freezing, added auto reconnect, improved socket lifecycle
