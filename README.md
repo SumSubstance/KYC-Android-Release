@@ -1,13 +1,10 @@
 # KYCClientSDK
-Last released version: 3.0.0
+Last released version: 2.5.5
 Versions 2.5.x and below now only for support (Latest 2.5.5)
 if your project doesn't use AndroidX, you may stay on version 2.5.5.
 
 ### Changes
 * 2.5.5 - Improved handler when a token is expired
-* 3.0.0 
-  Migrate to AndroidX
-  Zoom8 is available
   
 More info about Liveness you can see by link: https://github.com/SumSubstance/KYC-Android-Release/blob/master/LIVENESS.md
 
