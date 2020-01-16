@@ -9,7 +9,7 @@ Note: if your project doesn't use AndroidX, you may stay on version 2.5.5.
   Migrate to AndroidX
   Zoom8 is available
 
-More info about version 2.5.x see by the link: https://github.com/SumSubstance/KYC-Android-Release/tree/2.5.x
+Documentation for 2.5.x versions: https://github.com/SumSubstance/KYC-Android-Release/tree/2.5.x
 
 More info about Liveness you can see by the link: https://github.com/SumSubstance/KYC-Android-Release/blob/master/LIVENESS.md
 
