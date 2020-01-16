@@ -6,7 +6,7 @@ if your project doesn't use AndroidX, you may stay on version 2.5.5.
 ### Changes
 * 2.5.5 - Improved handler when a token is expired
   
-More info about Liveness you can see by link: https://github.com/SumSubstance/KYC-Android-Release/blob/master/LIVENESS.md
+More info about Liveness you can see by link: https://github.com/SumSubstance/KYC-Android-Release/blob/2.5.x/LIVENESS.md
 
 ### Installation
 * Supports Android SDK 18+
