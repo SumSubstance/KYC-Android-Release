@@ -1,23 +1,17 @@
 # KYCClientSDK
-Last released version: 2.5.3
+Last released version: 3.0.0
+Versions 2.5.x and below now only for support (Latest 2.5.5)
+if your project doesn't use AndroidX, you may stay on version 2.5.5.
 
 ### Changes
-- Fixed socket issues: chat freezing, added auto reconnect, improved socket lifecycle
-- Fixed issue with dissmissing of 6 photo in panel after successful liveness
-- Improved chat smoothness
-- Liveness changes: changes in the JSON response for the review result. Now it has structure like:
-```json
-"review: {
-  "reviewResult":  {
-     "reviewAnswer": "GREEN", // or RED
-     "rejectLabels": [ ]
-  }
-}
-```
+2.5.5 - Improved handler when a token is expired
+3.0.0
+Migrate to AndroidX
+Zoom8 is available```
 More info about Liveness you can see by link: https://github.com/SumSubstance/KYC-Android-Release/blob/master/LIVENESS.md
 
 ### Installation
-* Supports Android SDK 16+
+* Supports Android SDK 18+
 * Add maven repo to project's level build.gradle (in allProjects { repositories { section
 ```
 maven {
