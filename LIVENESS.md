@@ -20,7 +20,7 @@ badAngleImage
 ```
 
 ### Installation
-* Supports Android SDK 16+
+* Supports Android SDK 18+
 * Add maven repo to project's level build.gradle (in allProjects { repositories { section
 ```
 maven {
