@@ -1,5 +1,6 @@
 # KYCClientSDK
 Last released version: 2.5.5 
+
 Note: Versions 2.5.x and below now only for support (Latest 2.5.5)
 if your project doesn't use AndroidX, you may stay on version 2.5.5.
 
